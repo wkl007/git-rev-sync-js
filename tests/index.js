@@ -18,4 +18,7 @@ assert.equal(!!result.length, true, 'message() returns a string with non-zero le
 result = git.tag();
 assert.equal(!!result.length, true, 'tag() returns a string with non-zero length');
 
+result = git.count();
+assert.equal(!!result.length, true, 'tag() returns a string with non-zero length');
+
 console.log('tests passed');
