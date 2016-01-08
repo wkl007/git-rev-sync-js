@@ -49,8 +49,12 @@ function _getGitDirectory(start) {
   return _getGitDirectory(start)
 }
 
-function branch () {
-  var gitDir = _getGitDirectory()
+function branch (dir) {
+  var gitDir;
+
+  if (dir) gitDir = _getGitDirectory(dir);
+  else gitDir = _getGitDirectory();
+
   var head = fs.readFileSync(path.resolve(gitDir, 'HEAD'), 'utf8')
   var b = head.match(RE_BRANCH)
 
@@ -61,8 +65,8 @@ function branch () {
   return 'Detatched: ' + head.trim()
 }
 
-function long() {
-  var b = branch()
+function long(dir) {
+  var b = branch(dir)
 
   if (/Detatched: /.test(b)) {
     return b.substr(11)
@@ -88,8 +92,8 @@ function long() {
   return ref.trim()
 }
 
-function short() {
-  return long().substr(0, 7)
+function short(dir) {
+  return long(dir).substr(0, 7)
 }
 
 function message() {
