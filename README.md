@@ -3,7 +3,7 @@ git-rev-sync
 
 [![Build Status](https://travis-ci.org/kurttheviking/git-rev-sync.svg?branch=master)](https://travis-ci.org/kurttheviking/git-rev-sync.svg?branch=master)
 
-Synchronously get the current git commit hash, tag, branch or commit message. Forked from [git-rev](https://github.com/tblobaum/git-rev).
+Synchronously get the current git commit hash, tag, count, branch or commit message. Forked from [git-rev](https://github.com/tblobaum/git-rev).
 
 
 ## Example
@@ -25,6 +25,9 @@ console.log(git.message());
 
 console.log(git.tag());
 // v1.3.1
+
+console.log(git.count());
+// 60
 
 console.log(git.log());
 // not implemented
@@ -63,6 +66,10 @@ return the current tag; this method will fail if the `git` command is not found 
 #### git.message() &rarr; &lt;String&gt;
 
 return the current commit message; this method will fail if the `git` command is not found in your `PATH`
+
+#### git.count() &rarr; &lt;String&gt;
+
+return the count of commits across all branches; this method will fail if the `git` command is not found in your `PATH`
 
 ## License
 

@@ -104,6 +104,10 @@ function tag() {
   return _command('git', ['describe', '--always', '--tag', '--abbrev=0']);
 }
 
+function count() {
+  return _command('git', ['rev-list', '--all', '--count']);
+}
+
 function log() {
   throw new Error('not implemented')
 }
@@ -114,5 +118,6 @@ module.exports = {
   long : long,
   message : message,
   short : short,
-  tag : tag
-}
+  tag : tag,
+  count: count
+};
