@@ -47,29 +47,30 @@ You can also run these examples via: `npm run examples`
 var git = require('git-rev-sync');
 ```
 
-#### git.short() &rarr; &lt;String&gt;
+#### `git.short([filePath])` &rarr; &lt;String&gt;
 
-return the result of `git rev-parse --short HEAD`
+return the result of `git rev-parse --short HEAD`; optional `filePath` parameter can be used to run the command against a repo outside the current working directory
 
-#### git.long() &rarr; &lt;String&gt;
+#### `git.long([filePath])` &rarr; &lt;String&gt;
 
-return the result of `git rev-parse HEAD`
+return the result of `git rev-parse HEAD`; optional `filePath` parameter can be used to run the command against a repo outside the current working directory
 
-#### git.branch() &rarr; &lt;String&gt;
+#### `git.branch([filePath])` &rarr; &lt;String&gt;
 
-return the current branch
+return the current branch; optional `filePath` parameter can be used to run the command against a repo outside the current working directory
 
-#### git.tag() &rarr; &lt;String&gt;
+#### `git.tag()` &rarr; &lt;String&gt;
 
 return the current tag; this method will fail if the `git` command is not found in your `PATH`
 
-#### git.message() &rarr; &lt;String&gt;
+#### `git.message()` &rarr; &lt;String&gt;
 
 return the current commit message; this method will fail if the `git` command is not found in your `PATH`
 
-#### git.count() &rarr; &lt;String&gt;
+#### `git.count()` &rarr; &lt;String&gt;
 
 return the count of commits across all branches; this method will fail if the `git` command is not found in your `PATH`
+
 
 ## License
 
