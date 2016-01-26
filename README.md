@@ -67,7 +67,7 @@ return the current tag; this method will fail if the `git` command is not found 
 
 return the current commit message; this method will fail if the `git` command is not found in your `PATH`
 
-#### `git.count()` &rarr; &lt;String&gt;
+#### `git.count()` &rarr; &lt;Number&gt;
 
 return the count of commits across all branches; this method will fail if the `git` command is not found in your `PATH`
 
