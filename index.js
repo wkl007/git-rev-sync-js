@@ -50,10 +50,7 @@ function _getGitDirectory(start) {
 }
 
 function branch (dir) {
-  var gitDir;
-
-  if (dir) gitDir = _getGitDirectory(dir);
-  else gitDir = _getGitDirectory();
+  var gitDir = _getGitDirectory(dir);
 
   var head = fs.readFileSync(path.resolve(gitDir, 'HEAD'), 'utf8')
   var b = head.match(RE_BRANCH)
@@ -72,7 +69,7 @@ function long(dir) {
     return b.substr(11)
   }
 
-  var gitDir = _getGitDirectory()
+  var gitDir = _getGitDirectory(dir)
   var refsFilePath = path.resolve(gitDir, 'refs', 'heads', b)
   var ref;
 
