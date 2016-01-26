@@ -32,22 +32,27 @@ function _command(cmd, args) {
 }
 
 function _getGitDirectory(start) {
-  start = start || module.parent.filename;
+  if (start === undefined) {
+    start = module.parent.filename;
+  }
 
   if (typeof start === 'string') {
     start = start.split(PATH_SEP);
   }
 
-  start.pop();
+  var testPath = start.join(PATH_SEP);
 
-  var testPath = path.resolve(start.join(PATH_SEP), '.git');
+  if (!testPath.length) {
+    throw new Error('[git-rev-sync] no git repository found');
+  }
+
+  testPath = path.resolve(testPath, '.git');
+
   if (fs.existsSync(testPath)) {
     return testPath;
   }
 
-  if (!start.length) {
-    throw new Error('[git-rev-sync] no git repository found');
-  }
+  start.pop();
 
   return _getGitDirectory(start);
 }

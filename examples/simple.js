@@ -1,6 +1,6 @@
 'use strict';
 
-var git = require('../')
+var git = require('../');
 
 console.log('git.short() => ' + git.short());
 // e.g. 75bf4ee
