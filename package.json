@@ -25,6 +25,10 @@
       "name": "Hendrik Reker",
       "email": "reker.opensource@gmail.com",
       "url": "https://github.com/reker-"
+    },
+    {
+      "name": "fugwenna",
+      "url": "https://github.com/fugwenna"
     }
   ],
   "description": "Synchronously get the current git commit hash, tag, or branch",
