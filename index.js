@@ -111,7 +111,7 @@ function tag() {
 }
 
 function count() {
-  return _command('git', ['rev-list', '--all', '--count']);
+  return parseInt(_command('git', ['rev-list', '--all', '--count']), 10);
 }
 
 function log() {

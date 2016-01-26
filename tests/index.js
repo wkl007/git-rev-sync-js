@@ -19,6 +19,7 @@ result = git.tag();
 assert.equal(!!result.length, true, 'tag() returns a string with non-zero length');
 
 result = git.count();
-assert.equal(!!result.length, true, 'tag() returns a string with non-zero length');
+assert.notEqual(result, 0, 'count() returns a non-zero number');
+assert.equal(Math.abs(result), result, 'count() returns a positive number');
 
 console.log('tests passed');
