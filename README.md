@@ -19,18 +19,6 @@ console.log(git.long());
 
 console.log(git.branch());
 // master
-
-console.log(git.message());
-// initial commit
-
-console.log(git.tag());
-// v1.3.1
-
-console.log(git.count());
-// 60
-
-console.log(git.log());
-// not implemented
 ```
 
 You can also run these examples via: `npm run examples`

@@ -37,6 +37,7 @@
   "main": "index.js",
   "scripts": {
     "examples": "node examples/simple",
+    "examples-extended": "node examples/extended",
     "test": "node tests/index"
   },
   "repository": {
@@ -44,8 +45,8 @@
     "url": "git@github.com:kurttheviking/git-rev-sync.git"
   },
   "dependencies": {
-    "graceful-fs": "4.1.2",
-    "shelljs": "0.5.3"
+    "graceful-fs": "4.1.3",
+    "shelljs": "0.6.0"
   },
   "devDependencies": {}
 }
