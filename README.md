@@ -63,3 +63,12 @@ return the count of commits across all branches; this method will fail if the `g
 ## License
 
 [MIT](https://github.com/kurttheviking/git-rev-sync/blob/master/LICENSE)
+
+
+## Donations
+
+We're all in this together
+
+- https://www.coinbase.com/kurttheviking
+- https://www.paypal.me/kurttheviking
+
