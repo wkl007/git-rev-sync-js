@@ -47,9 +47,9 @@ return the result of `git rev-parse HEAD`; optional `filePath` parameter can be 
 
 return the current branch; optional `filePath` parameter can be used to run the command against a repo outside the current working directory
 
-#### `git.tag()` &rarr; &lt;String&gt;
+#### `git.tag([markDirty])` &rarr; &lt;String&gt;
 
-return the current tag; this method will fail if the `git` command is not found in your `PATH`
+return the current tag and mark as dirty if markDirty is truthful; this method will fail if the `git` command is not found in your `PATH`
 
 #### `git.message()` &rarr; &lt;String&gt;
 

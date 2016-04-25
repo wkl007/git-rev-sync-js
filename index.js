@@ -106,8 +106,11 @@ function message() {
   return _command('git', ['log', '-1', '--pretty=%B']);
 }
 
-function tag() {
-  return _command('git', ['describe', '--always', '--tag', '--abbrev=0']);
+function tag(markDirty) {
+  if (markDirty)
+   return _command('git', ['describe', '--always', '--tag', '--dirty', '--abbrev=0']);
+ else
+   return _command('git', ['describe', '--always', '--tag', '--abbrev=0']);
 }
 
 function count() {
