@@ -8,6 +8,7 @@ console.log('git.long() => ' + git.long());
 console.log('git.branch() => ' + git.branch());
 console.log('git.message() => ' + git.message());
 console.log('git.tag() => ' + git.tag());
+console.log('git.tag(true) => ' + git.tag(true));
 console.log('git.count() => ' + git.count());
 
 if (otherDir) {

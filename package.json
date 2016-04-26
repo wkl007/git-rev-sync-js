@@ -29,6 +29,10 @@
     {
       "name": "fugwenna",
       "url": "https://github.com/fugwenna"
+    },
+    {
+      "name": "LorenzGardner",
+      "url": "https://github.com/LorenzGardner"
     }
   ],
   "description": "Synchronously get the current git commit hash, tag, or branch",
