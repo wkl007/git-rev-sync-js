@@ -107,10 +107,11 @@ function message() {
 }
 
 function tag(markDirty) {
-  if (markDirty)
-   return _command('git', ['describe', '--always', '--tag', '--dirty', '--abbrev=0']);
- else
-   return _command('git', ['describe', '--always', '--tag', '--abbrev=0']);
+  if (markDirty) {
+    return _command('git', ['describe', '--always', '--tag', '--dirty', '--abbrev=0']);
+  }
+
+  return _command('git', ['describe', '--always', '--tag', '--abbrev=0']);
 }
 
 function count() {
