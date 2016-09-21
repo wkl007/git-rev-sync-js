@@ -16,7 +16,7 @@ function _command(cmd, args) {
     result = childProcess.spawnSync(cmd, args);
 
     if (result.status !== 0) {
-      throw new Error('[git-rev-sync] failed to execute command: ' + result.error.code);
+      throw new Error('[git-rev-sync] failed to execute command: ' + result.stderr);
     }
 
     return result.stdout.toString('utf8').replace(/^\s+|\s+$/g, '');
@@ -25,10 +25,10 @@ function _command(cmd, args) {
   result = shell.exec(cmd + ' ' + args.join(' '), {silent: true});
 
   if (result.code !== 0) {
-    throw new Error('[git-rev-sync] failed to execute command: ' + result.output);
+    throw new Error('[git-rev-sync] failed to execute command: ' + result.stdout);
   }
 
-  return result.output.toString('utf8').replace(/^\s+|\s+$/g, '');
+  return result.stdout.toString('utf8').replace(/^\s+|\s+$/g, '');
 }
 
 function _getGitDirectory(start) {
