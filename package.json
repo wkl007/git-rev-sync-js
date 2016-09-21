@@ -27,12 +27,16 @@
       "url": "https://github.com/reker-"
     },
     {
-      "name": "fugwenna",
+      "name": "Kevin Yanuk",
       "url": "https://github.com/fugwenna"
     },
     {
-      "name": "LorenzGardner",
+      "name": "Lorenz Gardner",
       "url": "https://github.com/LorenzGardner"
+    },
+    {
+      "name": "Colton Clemmer",
+      "url": "https://github.com/orbweaver-"
     }
   ],
   "description": "Synchronously get the current git commit hash, tag, or branch",
