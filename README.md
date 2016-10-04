@@ -55,6 +55,10 @@ return the current tag and mark as dirty if markDirty is truthful; this method w
 
 returns true if the current tag is dirty.
 
+#### `git.date()` &rarr; &lt;Date&gt;
+
+returns the date of the current commit.
+
 #### `git.message()` &rarr; &lt;String&gt;
 
 return the current commit message; this method will fail if the `git` command is not found in your `PATH`
