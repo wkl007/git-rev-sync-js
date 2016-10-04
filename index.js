@@ -114,6 +114,18 @@ function tag(markDirty) {
   return _command('git', ['describe', '--always', '--tag', '--abbrev=0']);
 }
 
+function isTagDirty() {
+  try {
+    _command('git', ['describe', '--exact-match', '--tags']);
+  } catch (e) {
+    if (e.message.indexOf('no tag exactly matches')) {
+      return true;
+    }
+    throw e;
+  }
+  return false;
+}
+
 function count() {
   return parseInt(_command('git', ['rev-list', '--all', '--count']), 10);
 }
@@ -129,5 +141,6 @@ module.exports = {
   long : long,
   message : message,
   short : short,
-  tag : tag
+  tag : tag,
+  isTagDirty: isTagDirty
 };
