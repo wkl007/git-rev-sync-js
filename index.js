@@ -49,6 +49,11 @@ function _getGitDirectory(start) {
   testPath = path.resolve(testPath, '.git');
 
   if (fs.existsSync(testPath)) {
+    if (!fs.statSync(testPath).isDirectory()) {
+      var parentRepoPath = fs.readFileSync(testPath, 'utf8').substring(8).trim();
+      return path.resolve(parentRepoPath);
+    }
+    
     return testPath;
   }
 
@@ -59,7 +64,7 @@ function _getGitDirectory(start) {
 
 function branch(dir) {
   var gitDir = _getGitDirectory(dir);
-
+  
   var head = fs.readFileSync(path.resolve(gitDir, 'HEAD'), 'utf8');
   var b = head.match(RE_BRANCH);
 
