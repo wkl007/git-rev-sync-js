@@ -53,7 +53,7 @@ return the current tag and mark as dirty if markDirty is truthful; this method w
 
 #### `git.isTagDirty()` &rarr; &lt;Boolean&gt;
 
-returns true if the current tag is dirty.
+returns true if the current tag is dirty; this method will fail if the `git` command is not found in your `PATH`
 
 #### `git.date()` &rarr; &lt;Date&gt;
 

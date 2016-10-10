@@ -126,6 +126,7 @@ function isTagDirty() {
     if (e.message.indexOf('no tag exactly matches')) {
       return true;
     }
+
     throw e;
   }
   return false;
