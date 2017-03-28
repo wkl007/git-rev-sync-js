@@ -1,6 +1,7 @@
 'use strict';
 
 var childProcess = require('child_process');
+var escapeStringRegexp = require('escape-string-regexp');
 var fs = require('graceful-fs');
 var path = require('path');
 var shell = require('shelljs');
@@ -100,15 +101,13 @@ function long(dir) {
 
   if (fs.existsSync(refsFilePath)) {
     ref = fs.readFileSync(refsFilePath, 'utf8');
-  }
-
-  else {
+  } else {
     // If there isn't an entry in /refs/heads for this branch, it may be that
     // the ref is stored in the packfile (.git/packed-refs). Fall back to
     // looking up the hash here.
     var refToFind = ['refs', 'heads', b].join('/');
     var packfileContents = fs.readFileSync(path.resolve(gitDir, 'packed-refs'), 'utf8');
-    var packfileRegex = new RegExp('(.*) ' + refToFind);
+    var packfileRegex = new RegExp('(.*) ' + escapeStringRegexp(refToFind));
     ref = packfileRegex.exec(packfileContents)[1];
   }
 
