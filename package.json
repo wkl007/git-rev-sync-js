@@ -3,7 +3,7 @@
   "version": "1.8.0",
   "author": "kurttheviking",
   "bugs": {
-    "url": "https://github.com/kurttheviking/git-rev-sync/issues"
+    "url": "https://github.com/kurttheviking/git-rev-sync-js/issues"
   },
   "contributors": [
     {
@@ -48,7 +48,7 @@
     }
   ],
   "description": "Synchronously get the current git commit hash, tag, or branch",
-  "homepage": "https://github.com/kurttheviking/git-rev-sync",
+  "homepage": "https://github.com/kurttheviking/git-rev-sync-js",
   "license": "MIT",
   "main": "index.js",
   "scripts": {
@@ -58,11 +58,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:kurttheviking/git-rev-sync.git"
+    "url": "git@github.com:kurttheviking/git-rev-sync-js.git"
   },
   "dependencies": {
-    "graceful-fs": "4.1.6",
-    "shelljs": "0.7.4"
+    "graceful-fs": "4.1.11",
+    "shelljs": "0.7.7"
   },
   "devDependencies": {}
 }
