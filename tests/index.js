@@ -4,19 +4,15 @@ var git = require('../index');
 var result;
 
 result = git.short();
-console.log('short', result);
-assert.equal(result.length, 7, 'short() returns string of length 7');
+assert.equal(result.length > 3, true, 'short() returns string of length 4+');
 
 result = git.long();
-console.log('long', result);
-assert.equal(result.length, 40, 'long() returns string of length 40');
+assert.equal(result.length > 38, true, 'long() returns string of length 39+');
 
 result = git.branch();
-console.log('branch', result);
 assert.equal(!!result.length, true, 'branch() returns a string with non-zero length');
 
 result = git.count();
-console.log('count', result);
 assert.notEqual(result, 0, 'count() returns a non-zero number');
 assert.equal(Math.abs(result), result, 'count() returns a positive number');
 
