@@ -132,6 +132,10 @@ function isTagDirty() {
   return false;
 }
 
+function date() {
+  return new Date(_command('git', ['log', '--no-color', '-n', '1', '--pretty=format:"%ad"']));
+}
+
 function count() {
   return parseInt(_command('git', ['rev-list', '--all', '--count']), 10);
 }
@@ -143,6 +147,7 @@ function log() {
 module.exports = {
   branch : branch,
   count: count,
+  date: date,
   log : log,
   long : long,
   message : message,
