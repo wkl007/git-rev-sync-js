@@ -1,8 +1,8 @@
 'use strict';
 
+var childProcess = require('child_process');
 var fs = require('graceful-fs');
 var path = require('path');
-var childProcess = require('child_process');
 var shell = require('shelljs');
 
 var HAS_NATIVE_EXECSYNC = childProcess.hasOwnProperty('spawnSync');
@@ -53,7 +53,7 @@ function _getGitDirectory(start) {
       var parentRepoPath = fs.readFileSync(testPath, 'utf8').substring(8).trim();
       return path.resolve(parentRepoPath);
     }
-    
+
     return testPath;
   }
 
@@ -64,7 +64,7 @@ function _getGitDirectory(start) {
 
 function branch(dir) {
   var gitDir = _getGitDirectory(dir);
-  
+
   var head = fs.readFileSync(path.resolve(gitDir, 'HEAD'), 'utf8');
   var b = head.match(RE_BRANCH);
 
