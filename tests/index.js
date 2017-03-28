@@ -12,9 +12,11 @@ console.log('long', result);
 assert.equal(result.length, 40, 'long() returns string of length 40');
 
 result = git.branch();
+console.log('branch', result);
 assert.equal(!!result.length, true, 'branch() returns a string with non-zero length');
 
 result = git.count();
+console.log('count', result);
 assert.notEqual(result, 0, 'count() returns a non-zero number');
 assert.equal(Math.abs(result), result, 'count() returns a positive number');
 
