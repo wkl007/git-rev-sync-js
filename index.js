@@ -72,13 +72,13 @@ function branch(dir) {
     return b[1];
   }
 
-  return 'Detatched: ' + head.trim();
+  return 'Detached: ' + head.trim();
 }
 
 function long(dir) {
   var b = branch(dir);
 
-  if (/Detatched: /.test(b)) {
+  if (/Detached: /.test(b)) {
     return b.substr(11);
   }
 
