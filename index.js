@@ -124,10 +124,10 @@ function message() {
 
 function tag(markDirty) {
   if (markDirty) {
-    return _command('git', ['describe', '--always', '--tag', '--dirty', '--abbrev=0']);
+    return _command('git', ['describe', '--always', '--tag', '--dirty', '--abbrev=0', '--first-parent']);
   }
 
-  return _command('git', ['describe', '--always', '--tag', '--abbrev=0']);
+  return _command('git', ['describe', '--always', '--tag', '--abbrev=0', '--first-parent']);
 }
 
 function isTagDirty() {
