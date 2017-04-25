@@ -92,7 +92,7 @@ function long(dir) {
   var b = branch(dir);
 
   if (/Detached: /.test(b)) {
-    return b.substr(11);
+    return b.substr(10);
   }
 
   var gitDir = _getGitDirectory(dir);
