@@ -73,7 +73,5 @@ return the current tag and mark as dirty if markDirty is truthful; this method w
 
 ## Donations
 
-We're all in this together
+[We're all in this together](https://cash.me/$kurttheviking)
 
-- https://www.coinbase.com/kurttheviking
-- https://www.paypal.me/kurttheviking
