@@ -151,6 +151,10 @@ function isTagDirty() {
   return false;
 }
 
+function remoteUrl() {
+  return _command('git', ['ls-remote', '--get-url']);
+}
+
 function date() {
   return new Date(_command('git', ['log', '--no-color', '-n', '1', '--pretty=format:"%ad"']));
 }
@@ -167,11 +171,12 @@ module.exports = {
   branch : branch,
   count: count,
   date: date,
-  log : log,
-  long : long,
-  message : message,
-  short : short,
-  tag : tag,
-  tagFirstParent : tagFirstParent,
-  isTagDirty: isTagDirty
+  isTagDirty: isTagDirty,
+  log: log,
+  long: long,
+  message: message,
+  remoteUrl: remoteUrl,
+  short: short,
+  tag: tag,
+  tagFirstParent: tagFirstParent
 };
