@@ -28,4 +28,7 @@ assert.equal(!!result.length, true, 'message() returns a string with non-zero le
 result = git.tag();
 assert.equal(!!result.length, true, 'tag() returns a string with non-zero length');
 
+result = git.remoteUrl();
+assert.equal(result.indexOf("https://github.com"), 0, "remoteUrl() returns unexpected value: '" + result + "'");
+
 console.log('tests passed');
