@@ -61,6 +61,10 @@ returns true if the current tag is dirty; this method will fail if the `git` com
 
 return the current commit message; this method will fail if the `git` command is not found in `PATH`
 
+#### `git.remoteUrl()` &rarr; &lt;String&gt;
+
+return the current remote URL; this method will fail if the `git` command is not found in `PATH`
+
 #### `git.tag([markDirty])` &rarr; &lt;String&gt;
 
 return the current tag and mark as dirty if markDirty is truthful; this method will fail if the `git` command is not found in `PATH`

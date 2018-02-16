@@ -163,11 +163,11 @@ module.exports = {
   branch : branch,
   count: count,
   date: date,
+  isTagDirty: isTagDirty,
   log : log,
   long : long,
   message : message,
-  short : short,
-  tag : tag,
-  isTagDirty: isTagDirty,
   remoteUrl: remoteUrl,
+  short : short,
+  tag : tag
 };
