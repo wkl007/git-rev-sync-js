@@ -45,6 +45,10 @@
     {
       "name": "Colton Clemmer",
       "url": "https://github.com/orbweaver-"
+    },
+    {
+      "name": "Tiberiu Zuld",
+      "url": "https://github.com/tiberiuzuld"
     }
   ],
   "description": "Synchronously get the current git commit hash, tag, or branch",
