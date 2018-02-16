@@ -130,6 +130,14 @@ function tag(markDirty) {
   return _command('git', ['describe', '--always', '--tag', '--abbrev=0']);
 }
 
+function tagFirstParent(markDirty) {
+    if (markDirty) {
+        return _command('git', ['describe', '--always', '--tag', '--dirty', '--abbrev=0', '--first-parent']);
+    }
+
+    return _command('git', ['describe', '--always', '--tag', '--abbrev=0', '--first-parent']);
+}
+
 function isTagDirty() {
   try {
     _command('git', ['describe', '--exact-match', '--tags']);
@@ -164,10 +172,11 @@ module.exports = {
   count: count,
   date: date,
   isTagDirty: isTagDirty,
-  log : log,
-  long : long,
-  message : message,
+  log: log,
+  long: long,
+  message: message,
   remoteUrl: remoteUrl,
-  short : short,
-  tag : tag
+  short: short,
+  tag: tag,
+  tagFirstParent: tagFirstParent
 };

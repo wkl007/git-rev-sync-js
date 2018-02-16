@@ -28,6 +28,9 @@ assert.equal(!!result.length, true, 'message() returns a string with non-zero le
 result = git.tag();
 assert.equal(!!result.length, true, 'tag() returns a string with non-zero length');
 
+result = git.tagFirstParent();
+assert.equal(result.length !=== 0, true, 'tagFirstParent() returns a string with non-zero length');
+
 result = git.remoteUrl();
 assert.equal(result.indexOf("https://github.com") === 0 || result.indexOf("git@github.com") === 0, true, "remoteUrl() returns unexpected value: '" + result + "'");
 
