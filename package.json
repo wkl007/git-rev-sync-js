@@ -1,6 +1,6 @@
 {
   "name": "git-rev-sync",
-  "version": "1.10.0",
+  "version": "1.11.0",
   "author": "kurttheviking",
   "bugs": {
     "url": "https://github.com/kurttheviking/git-rev-sync-js/issues"
