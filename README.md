@@ -33,9 +33,12 @@ You can also run these examples via: `npm run examples`
 var git = require('git-rev-sync');
 ```
 
-#### `git.short([filePath])` &rarr; &lt;String&gt;
+#### `git.short([filePath], [length])` &rarr; &lt;String&gt;
 
-return the result of `git rev-parse --short HEAD`; optional `filePath` parameter can be used to run the command against a repo outside the current working directory
+return the result of `git rev-parse --short HEAD`
+
+- optional `filePath` parameter can be used to run the command against a repo outside the current working directory
+- optional `length` parameter can be used to set the desired hash length (defaults to `7`)
 
 #### `git.long([filePath])` &rarr; &lt;String&gt;
 
