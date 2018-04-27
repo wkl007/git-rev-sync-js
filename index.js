@@ -33,7 +33,7 @@ function _command(cmd, args) {
 }
 
 function _getGitDirectory(start) {
-  if (start === undefined) {
+  if (start === undefined || start === null) {
     start = module.parent.filename;
   }
 

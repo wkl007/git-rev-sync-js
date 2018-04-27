@@ -6,6 +6,9 @@ var result;
 result = git.short();
 assert.equal(result.length > 3, true, 'short() returns string of length 4+');
 
+result = git.short(null, 8);
+assert.equal(result.length === 8, true, 'short() returns string of length 4+');
+
 result = git.long();
 assert.equal(result.length > 38, true, 'long() returns string of length 39+');
 
