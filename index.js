@@ -141,9 +141,13 @@ function tagFirstParent(markDirty) {
     return _command('git', ['describe', '--always', '--tag', '--abbrev=0', '--first-parent']);
 }
 
-function isDirty() {
+function hasUnstagedChanges() {
   var writeTree = _command('git', ['write-tree']);
   return _command('git', ['diff-index', writeTree, '--']).length > 0;
+}
+
+function isDirty() {
+  return _command('git', ['diff-index', 'HEAD', '--']).length > 0;
 }
 
 function isTagDirty() {
@@ -179,6 +183,7 @@ module.exports = {
   branch : branch,
   count: count,
   date: date,
+  hasUnstagedChanges: hasUnstagedChanges,
   isDirty: isDirty,
   isTagDirty: isTagDirty,
   log: log,
