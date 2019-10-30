@@ -96,7 +96,10 @@ function long(dir) {
   }
 
   var gitDir = _getGitDirectory(dir);
-  var refsFilePath = path.resolve(gitDir, 'refs', 'heads', b);
+  var gitRootDir = gitDir.indexOf('.git/worktrees/') > 0 ?
+    gitDir.replace(/\.git\/worktrees\/.+$/, '.git') :
+    gitDir;
+  var refsFilePath = path.resolve(gitRootDir, 'refs', 'heads', b);
   var ref;
 
   if (fs.existsSync(refsFilePath)) {
