@@ -1,7 +1,7 @@
 git-rev-sync [![Build Status](https://travis-ci.org/kurttheviking/git-rev-sync-js.svg?branch=master)](https://travis-ci.org/kurttheviking/git-rev-sync-js)
 ============
 
-Synchronously get the current git commit hash, tag, count, branch or commit message. Forked from [git-rev](https://github.com/tblobaum/git-rev).
+Synchronously get the current git commit hash, tag, count, branch or commit message. Forked from [git-rev](https://github.com/tblobaum/git-rev). Supports Node 4+.
 
 
 ## Example
