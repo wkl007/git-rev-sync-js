@@ -34,7 +34,7 @@ function _command(cmd, args) {
 
 function _getGitDirectory(start) {
   if (start === undefined || start === null) {
-    start = module.parent.filename;
+    start = module.parent ? module.parent.filename : module.filename;
   }
 
   if (typeof start === 'string') {
